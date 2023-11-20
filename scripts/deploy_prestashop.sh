@@ -109,7 +109,7 @@ sed -i "s/upload_max_filesize = 2M/$uploadmaxfilesize/" /etc/php/8.1/apache2/php
 
 sudo systemctl restart apache2
 
-#--- INSTALACIÓN PRESTASHOP ---
+#--- INSTALACIÓN PRESTASHOP -----------------------------------------------
 
 php /var/www/html/PrestaShop-8.0.0/install-dev/index_cli.php \
     --domain=$CERTIFICATE_DOMAIN \
