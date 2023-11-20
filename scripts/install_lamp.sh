@@ -29,8 +29,17 @@ sudo apt install php libapache2-mod-php php-mysql -y
 
 systemctl restart  apache2
 
+
+#Movemos el código de PHP.info al directorio /var/Www/html/Prestashop.8.0.0
+
+cp /home/ubuntu/Practica01-8IAW/php/phpinfo.php /var/www/html
+
 # Modificamos el propietario y el grupo del directorio /var/www/html
 
 chown -R www-data:www-data /var/www/html
+
+
+
+
 
 
