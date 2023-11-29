@@ -24,8 +24,7 @@ php /var/www/html/install/index_cli.php \
     --prefix=myshop_ \
     --email=$email \
     --password=$PRESTASHOP_DB_PASSWORD \
-    --country
-
+    --ssl=1
 
 
 #Reiniciamos de nuevo apache
