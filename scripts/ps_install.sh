@@ -15,18 +15,17 @@ source .env
 
 #--- INSTALACIÓN PRESTASHOP ----------------------------------------------
 
-php /var/www/html/PrestaShop-8.0.0/install-dev/index_cli.php \
+php /var/www/html/install/index_cli.php \
     --domain=$CERTIFICATE_DOMAIN \
     --db_server=$PRESTASHOP_DB_HOST \
     --db_name=$PRESTASHOP_DB_NAME \
     --db_user=$PRESTASHOP_DB_USER \
     --db_password=$PRESTASHOP_DB_PASSWORD \
     --prefix=myshop_ \
-    --email=$CERTIFICATE_EMAIL \
+    --email=$email \
     --password=$PRESTASHOP_DB_PASSWORD \
-    --ssl=1 \
-    --lenguage="ES" \
-    
+    --country
+
 
 
 #Reiniciamos de nuevo apache

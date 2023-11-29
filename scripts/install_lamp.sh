@@ -37,9 +37,3 @@ cp /home/ubuntu/Practica01-8IAW/php/phpinfo.php /var/www/html
 # Modificamos el propietario y el grupo del directorio /var/www/html
 
 chown -R www-data:www-data /var/www/html
-
-
-
-
-
-

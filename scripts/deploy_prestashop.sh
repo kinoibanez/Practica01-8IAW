@@ -20,22 +20,27 @@ sudo apt install unzip -y
 
 #Borramos los archivos por si tenemos que volver a lanzar el script.
 
-rm -rf /tmp/8.0.0.zip
+rm -rf /tmp/prestashop_8.1.2.zip
 
 #Descargamos la última versión de PrestaShop con el comando wget.
 
 
-wget https://github.com/PrestaShop/PrestaShop/archive/refs/tags/8.0.0.zip -P /tmp
+wget https://github.com/PrestaShop/PrestaShop/releases/download/8.1.2/prestashop_8.1.2.zip -P /tmp
 
 
 #Eliminamos el directorio para posteriores instalaciones.
 
 
-rm -rf /var/www/html/PrestaShop-8.0.0
+rm -rf /var/www/html/*
 
 #Descomprimimos el archivo.
 
-unzip /tmp/8.0.0.zip -d /var/www/html/ 
+
+unzip /tmp/prestashop_8.1.2.zip -d /var/www/html/
+
+#Recordar hacer el unzip de prestashop manualmente en /var/www/html
+#sudo unzip /var/www/html/prestashop.zip
+
 
 #Ejecutamos el comando para dar permisos al usuario de apache.
 
@@ -105,4 +110,3 @@ sed -i "s/upload_max_filesize = 2M/$uploadmaxfilesize/" /etc/php/8.1/apache2/php
 
 #Reiniciamos de nuevo apache
 sudo systemctl restart apache2
-
